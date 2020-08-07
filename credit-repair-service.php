@@ -1,3 +1,20 @@
+<?php
+// johnrbach@elitecreditsolutionsusa.com
+if($_POST["submit"]) {
+    $recipient="ibprince12@gmail.com";
+    $subject="Form to email message";
+    $name=$_POST["name"];
+    $email=$_POST["email"];
+    $phone=$_POST["phone"];
+
+    $mailBody="Name: $name\nEmail: $email\nPhone Number: $phone";
+
+    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
+
+    $thankYou="<p>Thank you!</p>";
+}
+
+?>
 <!DOCTYPE html>
 <!-- saved from url=(0077)http://web.archive.org/web/20190305024208/http://elitecreditsolutionsusa.com/ -->
 <html lang="en" class="desktop landscape js-focus-visible" data-js-focus-visible=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./credit repair service_files/analytics.js(1).download" type="text/javascript"></script>
@@ -166,8 +183,8 @@ Started Today!</h2>
 </div>
 
 <div class="col-sm-12 center-md">
-  <!-- http://web.archive.org/web/20190305024208/http://elitecreditsolutionsusa.com/bat/rd-mailform.php -->
-<form action="contact-handler.php" class="mailform" method="post"><input name="form-type" type="hidden" value="contact">
+<?=$thankYou ?>
+<form action="credit-repair-service.php http://web.archive.org/web/20190305024208/http://elitecreditsolutionsusa.com/bat/rd-mailform.php" class="mailform" method="post"><input name="form-type" type="hidden" value="contact">
 <h4><span>Request a</span><br>
 FREE Consultation</h4>
 
